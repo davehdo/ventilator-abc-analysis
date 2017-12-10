@@ -36,11 +36,11 @@ tmp( tmp <= 0 ) = 0.1;
 outcomes(1).classifications = tmp;
 
 
-predictor_names = {'Intervention group', 'APACHE IV Score', 'Was Pressor Dep', 'age'};
+predictor_names = {'Intervention group', 'APACHE IV Score', 'Was Pressor Dep' };
 predictor_1 = ismember( raw_table.state( is_control_or_int), 'intervention') .* 1.0;
 predictor_2 = cell_of_strings_to_numerical_array( raw_table.apache_4( is_control_or_int));
 predictor_3 = ismember(raw_table.was_pressor_dependent(is_control_or_int), 'true') .* 1.0;
-% predictor_4 = raw_table.AGE(is_control_or_int) >  70;
+
 
 
 

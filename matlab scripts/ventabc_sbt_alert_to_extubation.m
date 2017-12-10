@@ -47,7 +47,7 @@ disp(['stdev cap60 ' num2str( nanstd(cap(values_control, 60)) ) '     ' num2str(
 
 disp(['  There are ' num2str(sum(isnan(time_interval( and( is_control_or_int, ~is_censored) )))) ' uncensored values that are NaN']);
 
-predictor_names = {'Intervention group', 'APACHE IV Score', 'Was Pressor Dep', 'age'};
+predictor_names = {'Intervention group', 'APACHE IV Score', 'Was Pressor Dep' };
 predictor_1 = ismember( raw_table.state( is_control_or_int), 'intervention');
 predictor_2 = cell_of_strings_to_numerical_array(raw_table.apache_4( is_control_or_int));
 predictor_3 = ismember(raw_table.was_pressor_dependent(is_control_or_int), 'true');
